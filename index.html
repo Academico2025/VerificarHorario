@@ -43,8 +43,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horario General de Clases 2025 - Vasco Núñez de Balboa</title>
-    <center> <img src="logo.png" alt="Imagen 2x2 cm" style="width: 2cm; height: 2cm;">
- <center/>
+    <center> <img src="logo.png" alt="Imagen 2x2 cm" style="width: 2cm; height: 2cm;"></center>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -58,6 +57,8 @@
         h2 {
             color: #444;
             margin-top: 20px;
+            display: inline-block;
+            vertical-align: middle;
         }
         table {
             width: 100%;
@@ -128,6 +129,20 @@
             width: 80%;
             margin: 20px auto;
         }
+        .schedule-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        select, input[type="date"] {
+            padding: 5px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+        }
         @media (max-width: 600px) {
             th, td {
                 font-size: 10px;
@@ -146,13 +161,18 @@
             #teachersTable {
                 width: 100%;
             }
+            select, input[type="date"] {
+                font-size: 12px;
+                padding: 4px;
+            }
         }
     </style>
 </head>
 <body>
+    <center>
     <h2>INSTITUCIÓN EDUCATIVA VASCO NÚÑEZ DE BALBOA - SEDE PRINCIPAL</h2>
     <h3>HORARIO GENERAL DE CLASES 2025</h3>
-    <h3>Selecciona el número del docente ausente en la tabla</h3>
+    <h3>Selecciona el número del docente ausente en la tabla</h3></center>
     <div class="controls">
         <div class="input-grid">
             <input type="number" min="1" max="34" placeholder="1-34">
@@ -185,12 +205,15 @@
             <input type="number" min="1" max="34" placeholder="1-34">
             <input type="number" min="1" max="34" placeholder="1-34">
             <input type="number" min="1" max="34" placeholder="1-34">
-        </div>
-        <button id="searchBtn">Buscar</button>
+            <input type="number" min="1" max="34" placeholder="1-34">
+            <input type="number" min="1" max="34" placeholder="1-34">
+            <input type="number" min="1" max="34" placeholder="1-34">
+            <input type="number" min="1" max="34" placeholder="1-34">
+    </div>
+            <button id="searchBtn">Buscar</button>
         <button id="clearBtn">Borrar</button>
         <button id="teachersBtn">Ver/ocultar Docentes</button>
     </div>
-
     <!-- Teacher List Table -->
     <table id="teachersTable">
         <tr>
@@ -235,7 +258,17 @@
     </table>
 
     <!-- Horario 1 -->
-    <h2>HORARIO 1</h2>
+    <div class="schedule-header">
+        <select>
+            <option value="LUNES">LUNES</option>
+            <option value="MARTES">MARTES</option>
+            <option value="MIÉRCOLES">MIÉRCOLES</option>
+            <option value="JUEVES">JUEVES</option>
+            <option value="VIERNES">VIERNES</option>
+        </select>
+        <input type="date">
+        <h2>HORARIO 1</h2>
+    </div>
     <table>
         <tr>
             <th>HORA</th>
@@ -309,7 +342,17 @@
     </table>
 
     <!-- Horario 2 -->
-    <h2>HORARIO 2</h2>
+    <div class="schedule-header">
+        <select>
+            <option value="LUNES">LUNES</option>
+            <option value="MARTES">MARTES</option>
+            <option value="MIÉRCOLES">MIÉRCOLES</option>
+            <option value="JUEVES">JUEVES</option>
+            <option value="VIERNES">VIERNES</option>
+        </select>
+        <input type="date">
+        <h2>HORARIO 2</h2>
+    </div>
     <table>
         <tr>
             <th>HORA</th>
@@ -383,7 +426,17 @@
     </table>
 
     <!-- Horario 3 -->
-    <h2>HORARIO 3</h2>
+    <div class="schedule-header">
+        <select>
+            <option value="LUNES">LUNES</option>
+            <option value="MARTES">MARTES</option>
+            <option value="MIÉRCOLES">MIÉRCOLES</option>
+            <option value="JUEVES">JUEVES</option>
+            <option value="VIERNES">VIERNES</option>
+        </select>
+        <input type="date">
+        <h2>HORARIO 3</h2>
+    </div>
     <table>
         <tr>
             <th>HORA</th>
@@ -457,7 +510,17 @@
     </table>
 
     <!-- Horario 4 -->
-    <h2>HORARIO 4</h2>
+    <div class="schedule-header">
+        <select>
+            <option value="LUNES">LUNES</option>
+            <option value="MARTES">MARTES</option>
+            <option value="MIÉRCOLES">MIÉRCOLES</option>
+            <option value="JUEVES">JUEVES</option>
+            <option value="VIERNES">VIERNES</option>
+        </select>
+        <input type="date">
+        <h2>HORARIO 4</h2>
+    </div>
     <table>
         <tr>
             <th>HORA</th>
@@ -531,7 +594,17 @@
     </table>
 
     <!-- Horario 5 -->
-    <h2>HORARIO 5</h2>
+    <div class="schedule-header">
+        <select>
+            <option value="LUNES">LUNES</option>
+            <option value="MARTES">MARTES</option>
+            <option value="MIÉRCOLES">MIÉRCOLES</option>
+            <option value="JUEVES">JUEVES</option>
+            <option value="VIERNES">VIERNES</option>
+        </select>
+        <input type="date">
+        <h2>HORARIO 5</h2>
+    </div>
     <table>
         <tr>
             <th>HORA</th>
