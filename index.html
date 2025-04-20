@@ -45,7 +45,6 @@
     <title>Horario General de Clases 2025 - Vasco Núñez de Balboa</title>
     <center> <img src="logo.png" alt="Imagen 2x2 cm" style="width: 2cm; height: 2cm;">
  <center/>
-    </>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -117,8 +116,17 @@
             background-color: #f44336;
             color: white;
         }
+        #teachersBtn {
+            background-color: #2196F3;
+            color: white;
+        }
         button:hover {
             opacity: 0.9;
+        }
+        #teachersTable {
+            display: none;
+            width: 80%;
+            margin: 20px auto;
         }
         @media (max-width: 600px) {
             th, td {
@@ -135,13 +143,16 @@
                 padding: 8px 15px;
                 font-size: 12px;
             }
+            #teachersTable {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>INSTITUCIÓN EDUCATIVA VASCO NÚÑEZ DE BALBOA - SEDE PRINCIPAL</h1>
-    <h2>HORARIO GENERAL DE CLASES 2025</h2>
-
+    <h2>INSTITUCIÓN EDUCATIVA VASCO NÚÑEZ DE BALBOA - SEDE PRINCIPAL</h2>
+    <h3>HORARIO GENERAL DE CLASES 2025</h3>
+    <h3>Selecciona el número del docente ausente en la tabla</h3>
     <div class="controls">
         <div class="input-grid">
             <input type="number" min="1" max="34" placeholder="1-34">
@@ -176,8 +187,52 @@
             <input type="number" min="1" max="34" placeholder="1-34">
         </div>
         <button id="searchBtn">Buscar</button>
-        <button id="clearBtn">Borrar color</button>
+        <button id="clearBtn">Borrar</button>
+        <button id="teachersBtn">Ver/ocultar Docentes</button>
     </div>
+
+    <!-- Teacher List Table -->
+    <table id="teachersTable">
+        <tr>
+            <th>No</th>
+            <th>Docentes</th>
+            <th>Director</th>
+        </tr>
+        <tr><td>1</td><td>MORALBA INES PINO MOLANO</td><td>SEXTO 1</td></tr>
+        <tr><td>2</td><td>ROVIRA PAREDES BAUTISTA</td><td>SEXTO 2</td></tr>
+        <tr><td>3</td><td>MARDEN PERAFAN GUACA</td><td>SEXTO 3</td></tr>
+        <tr><td>4</td><td>ALEX ROSERO</td><td>SEXTO 4</td></tr>
+        <tr><td>5</td><td>JUAN DAVID REALPE TORO</td><td>SEXTO 5</td></tr>
+        <tr><td>6</td><td>PAULA ANDREA BEDOYA BENAVIDES</td><td>SEPTIMO 1</td></tr>
+        <tr><td>7</td><td>JOSE DAVID CHICAIZA DAZA</td><td>SEPTIMO 2</td></tr>
+        <tr><td>8</td><td>LAURA NAYIBE MUÑOZ MENESES</td><td>SEPTIMO 3</td></tr>
+        <tr><td>9</td><td>WILMAN FERNANDO VIVEROS RIVERA</td><td>SEPTIMO 4</td></tr>
+        <tr><td>10</td><td>NELSON RICHAR ERAZO QUINAYAS</td><td>SEPTIMO 5</td></tr>
+        <tr><td>11</td><td>YILMAR KENY CHEPE CASO</td><td>OCTAVO 1</td></tr>
+        <tr><td>12</td><td>LUIS ALEJANDRO CRUZ LOPEZ</td><td>OCTAVO 2</td></tr>
+        <tr><td>13</td><td>ANDRES FELIPE ALEGRIA JIMENEZ</td><td>OCTAVO 3</td></tr>
+        <tr><td>14</td><td>NILSON JAVIER ALEMAN MOROCHO</td><td>OCTAVO 4</td></tr>
+        <tr><td>15</td><td>CESAR AUGUSTO MUESES VILLAMARIN</td><td>OCTAVO 5</td></tr>
+        <tr><td>16</td><td>CRISTIAN CAMILO GOMEZ QUIROZ</td><td>NOVENO 1</td></tr>
+        <tr><td>17</td><td>IDALIA AMPARO LOPEZ GALLARDO</td><td>NOVENO 2</td></tr>
+        <tr><td>18</td><td>TATIANA LUCENA ORTEGA CAMACHO</td><td>NOVENO 3</td></tr>
+        <tr><td>19</td><td>DIOMIRA MUÑOZ HOYOS</td><td>NOVENO 4</td></tr>
+        <tr><td>20</td><td>YURANI VILLEGAS PINO</td><td>DECIMO 1</td></tr>
+        <tr><td>21</td><td>MIGUEL ALEJANDRO GUERRERO</td><td>DECIMO 2</td></tr>
+        <tr><td>22</td><td>LUZ HELENA CAMPO DIAZ</td><td>DECIMO 3</td></tr>
+        <tr><td>23</td><td>JON HERLEY MOLINA IMBACHI</td><td>UNDECIMO 1</td></tr>
+        <tr><td>24</td><td>JHON EMILIO ORTEGA RIASCOS</td><td>UNDECIMO 2</td></tr>
+        <tr><td>25</td><td>YENNY PAOLA GUTIERREZ SALAZAR</td><td>UNDECIMO 3</td></tr>
+        <tr><td>26</td><td>MARIA DILDUCENIDES IBARRA CORREA</td><td></td></tr>
+        <tr><td>27</td><td>CARLINA CLEOFE JIMENEZ SAMPAYO</td><td></td></tr>
+        <tr><td>28</td><td>JANIO YAMIN CHAVEZ CARBALLO</td><td></td></tr>
+        <tr><td>29</td><td>NN MATEMATICAS</td><td></td></tr>
+        <tr><td>30</td><td>NN SOCIALES</td><td></td></tr>
+        <tr><td>31</td><td>GLORIA ESTELA CAICEDO MORCILLO</td><td></td></tr>
+        <tr><td>32</td><td>ENRIQUE CORDOBA HOYOS</td><td></td></tr>
+        <tr><td>33</td><td>MARTHA STELLA GUSTIN RINCON</td><td></td></tr>
+        <tr><td>34</td><td>YON KENNEDY MARTINEZ GUERRERO</td><td></td></tr>
+    </table>
 
     <!-- Horario 1 -->
     <h2>HORARIO 1</h2>
@@ -222,7 +277,7 @@
             <td>ING (19)</td><td>QUIM (24)</td><td>FÍSIC (23)</td>
         </tr>
         <tr>
-            <td>4</ Anchored at:</td>
+            <td>4</td>
             <td>SOC (28)</td><td>INFO (29)</td><td>CN (6)</td><td>MAT (4)</td><td>SOC (30)</td>
             <td>MAT (7)</td><td>SOC (6)</td><td>LC (31)</td><td>BIO (8)</td><td>ING (11)</td>
             <td>SOC (20)</td><td>BIO (34)</td><td>INFO (9)</td><td>ALG (14)</td><td>EFIS (15)</td>
@@ -459,7 +514,7 @@
             <td>5</td>
             <td>ING (2)</td><td>SOC (28)</td><td>ING (31)</td><td>EFIS (32)</td><td>ING (11)</td>
             <td>INFO (9)</td><td>MAT (7)</td><td>BIO (8)</td><td>SOC (6)</td><td>BIO (10)</td>
-            <<i>BIO (34)</td><td>LC (13)</td><td>SOC (20)</td><td>ALG (14)</td><td>ING (33)</td>
+            <td>BIO (34)</td><td>LC (13)</td><td>SOC (20)</td><td>ALG (14)</td><td>ING (33)</td>
             <td>BIO (3)</td><td>SOC (17)</td><td>INFO (21)</td><td>LC (18)</td>
             <td>ART (12)</td><td>TRIG (16)</td><td>LC (22)</td>
             <td>EFIS (15)</td><td>FÍSIC (23)</td><td>LC (25)</td>
@@ -594,6 +649,11 @@
             document.querySelectorAll('input[type="number"]').forEach(input => {
                 input.value = '';
             });
+        });
+
+        document.getElementById('teachersBtn').addEventListener('click', () => {
+            const teachersTable = document.getElementById('teachersTable');
+            teachersTable.style.display = teachersTable.style.display === 'none' ? 'table' : 'none';
         });
     </script>
 </body>
