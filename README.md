@@ -1,1 +1,1 @@
-Verificar ausencia de docentes en el horario
+Verificar docentes en el horario
